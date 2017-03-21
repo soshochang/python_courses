@@ -1,0 +1,7 @@
+<h2>Are you sure you want to delete the following course? </h2>
+Name: {{course.name}}
+Description: {{course.description}}
+<form action="/remove/{{course.id}}" method="post">
+  {% csrf_token %}
+  <input type="submit" value="delete">
+</form>
